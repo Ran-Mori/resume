@@ -5,6 +5,7 @@ const navItems = ["About", "Experience", "Projects"];
 
 export default function Nav() {
   const [activeSegment, setActiveSegment] = useState("about");
+  const [hovered, setHovered] = useState<string>("");
   const visibleSections = useRef(new Set<string>());
 
   useEffect(() => {
@@ -45,18 +46,36 @@ export default function Nav() {
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <nav className="nav hidden lg:block">
-      <ul className="mt-16 w-max">
-        {navItems.map((item) => (
-          <li key={item}>
-            <a className="group flex items-center py-3" href={`#${item.toLowerCase()}`}>
-              <span className={`mr-4 h-px w-8 bg-slate transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSegment === item.toLowerCase() ? "w-16 bg-slate-200" : ""}`}></span>
-              <span className={`text-xs font-bold uppercase tracking-widest text-slate group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSegment === item.toLowerCase() ? "text-slate-200" : ""}`}>{item}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+    return (
+        <nav className="nav hidden lg:block">
+            <ul className="mt-16 w-max">
+                {navItems.map((item) => {
+                    const id = item.toLowerCase();
+                    const isHighlighted = hovered === id || (hovered === "" && activeSegment === id);
+
+                    return (
+                        <li key={item}>
+                            <a
+                                onMouseEnter={() => {
+                                    setHovered(id)
+                                }}
+                                onMouseLeave={() => {
+                                    setHovered("")
+                                }}
+                                className="group flex items-center py-3" href={`#${id}`}>
+                                <span
+                                    className={`mr-4 h-px w-8 bg-slate transition-all group-focus-visible:w-16 group-focus-visible:bg-slate-200 
+                                        ${isHighlighted ? "w-16 bg-slate-200" : ""}
+                                       `}></span>
+                                <span
+                                    className={`text-xs font-bold uppercase tracking-widest text-slate group-focus-visible:text-slate-200 
+                                        ${isHighlighted ? "text-slate-200" : ""}
+                                    `}>{item}</span>
+                            </a>
+                        </li>
+                    );
+                })}
+            </ul>
+        </nav>
+    );
 }
