@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import ProfilePicture from "@/components/ProfilePicture";
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectCard from "@/components/ProjectCard";
 import { JOBS, PROJECTS } from "@/lib/data";
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="lg:flex lg:justify-between lg:gap-4">
       <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
         <div>
+          <ProfilePicture />
           <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Your Name</h1>
           <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Senior Android Engineer</h2>
           <p className="mt-4 max-w-xs leading-normal">I build pixel-perfect, accessible, and high-performance mobile experiences.</p>
