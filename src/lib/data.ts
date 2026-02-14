@@ -1,3 +1,8 @@
+import doubaoLogo from "@/assets/logo/doubao_logo.png";
+import douyinLogo from "@/assets/logo/douyin_logo.png";
+import duoshanLogo from "@/assets/logo/duoshan_logo.png";
+import { StaticImageData } from "next/image";
+
 export interface Job {
   start: string;
   end: string;
@@ -10,78 +15,53 @@ export interface Job {
 
 export const JOBS: Job[] = [
   {
-    start: "2024",
+    start: "2025",
     end: "PRESENT",
     role: "Senior Android Engineer",
-    company: "Tech Corp",
-    description: "Leading the development of the flagship mobile application using Jetpack Compose and clean architecture principles. Improved app performance by 30% and reduced build times.",
-    skills: ["Kotlin", "Jetpack Compose", "Coroutines", "Dagger Hilt", "Clean Architecture"],
-    link: "https://example.com",
+    company: "Doubao, Bytedance",
+    description: "Engineered and optimized the core architecture for the Photo Album editing suite, decoupling complex image processing logic from UI components to support rapid feature scalability. Successfully streamlined the development lifecycle, boosting iteration efficiency by 40%, while delivering a smoother, high-performance interaction model that elevated the cumulative user experience score by +1.87.",
+    skills: ["Kotlin", "MVI", "Coroutines", "Clean Architecture"],
+    link: "https://o.doubao.com/",
   },
   {
-    start: "2021",
-    end: "2024",
+    start: "2022",
+    end: "2025",
     role: "Android Engineer",
-    company: "StartUp Inc",
-    description: "Developed and maintained multiple Android applications. Implemented new features and resolved critical bugs. Collaborated with cross-functional teams to deliver high-quality products.",
-    skills: ["Kotlin", "Java", "MVVM", "Retrofit", "Unit Testing"],
-    link: "https://example.com",
-  },
-  {
-    start: "2019",
-    end: "2021",
-    role: "Junior Mobile Developer",
-    company: "App Agency",
-    description: "Assisted in the development of iOS and Android applications for various clients. Learned best practices in mobile development and contributed to code reviews.",
-    skills: ["Swift", "Kotlin", "Git", "Jira"],
-    link: "https://example.com",
-  },
-  {
-    start: "2018",
-    end: "2019",
-    role: "Software Intern",
-    company: "Innovative Solutions",
-    description: "Worked on internal tools and automated testing scripts. Gained hands-on experience with agile methodologies and software development lifecycle.",
-    skills: ["Python", "Bash", "Selenium"],
-    link: "https://example.com",
-  },
+    company: "Douyin, Bytedance",
+    description: "Modernized the Feed module’s tagging system by refactoring legacy code, reducing component coupling by 3.5 and cutting downstream integration costs by 50%. Designed and shipped the native social text publisher engine, driving a measurable uptick in user-generated content—increasing daily total submissions by 0.179% and original (non-repost) content creation by 0.288% within the initial launch window.",
+    skills: ["Kotlin", "Java", "MVVM", "Retrofit", "RxJava"],
+    link: "https://www.douyin.com/",
+  }
 ];
 
 export interface Project {
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   link: string;
   skills: string[];
 }
 
 export const PROJECTS: Project[] = [
   {
-    title: "E-commerce Mobile App",
-    description: "A fully functional e-commerce mobile application built with Jetpack Compose. Features include product browsing, cart management, and secure checkout integration.",
-    image: "/projects/ecommerce.png",
-    link: "https://github.com/example/ecommerce",
+    title: "Doubao Photo Album",
+    description: "Mobile assistants for the era of large language models offer more convenient interaction and richer capabilities.",
+    image: doubaoLogo,
+    link: "https://o.doubao.com/",
     skills: ["Kotlin", "Compose", "Stripe API", "Firebase"],
   },
   {
-    title: "Task Management Tool",
-    description: "A productivity app designed to help teams collaborate effectively. Includes real-time updates, task assignment, and progress tracking.",
-    image: "/projects/taskmanager.png",
-    link: "https://github.com/example/taskmanager",
+    title: "Douyin",
+    description: "Douyin is a popular short - video - sharing platform. It allows users to create and share fun, engaging videos with a global audience.",
+    image: douyinLogo,
+    link: "https://www.douyin.com/",
     skills: ["React Native", "TypeScript", "Node.js", "Socket.io"],
   },
   {
-    title: "Weather Forecast Dashboard",
-    description: "A weather dashboard that provides detailed forecasts and historical weather data. Utilizes open-source weather APIs for accurate information.",
-    image: "/projects/weather.png",
-    link: "https://github.com/example/weather",
+    title: "Duoshan",
+    description: "Duoshan is a chat application under Douyin. Here you can chat with Douyin friends, post daily updates, and also see content posted by friends and people you may know.",
+    image: duoshanLogo,
+    link: "https://www.duoshanapp.com/",
     skills: ["Flutter", "Dart", "OpenWeatherMap API"],
-  },
-  {
-    title: "Fitness Tracker",
-    description: "An app to track workouts, nutrition, and health metrics. Integrates with wearable devices to collect health data.",
-    image: "/projects/fitness.png",
-    link: "https://github.com/example/fitness",
-    skills: ["SwiftUI", "HealthKit", "CoreData"],
   },
 ];
