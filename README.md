@@ -73,7 +73,44 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - `npm run dev`: Starts the development server with hot-reloading.
 - `npm run build`: Builds the application for production.
 - `npm run start`: Starts the production server (requires a build first).
-- `npm run lint`: Runs ESLint to check for code quality issues.
+- \`npm run lint\`: Runs ESLint to check for code quality issues.
+
+## 🚀 One-Click Deployment
+
+This project includes a shell script for seamless deployment to a remote server (Ubuntu/Debian recommended).
+
+### Prerequisites
+
+- A remote server with **SSH access** (preferably \`root\` user).
+- The server's IP address.
+
+### Usage
+
+1.  **Make the script executable** (first time only):
+
+    \`\`\`bash
+    chmod +x deploy_remote.sh
+    \`\`\`
+
+2.  **Run the deployment script**:
+
+    \`\`\`bash
+    ./deploy_remote.sh <YOUR_SERVER_IP>
+    \`\`\`
+
+    Example:
+    \`\`\`bash
+    ./deploy_remote.sh 1.2.3.4
+    \`\`\`
+
+    If you don't provide an IP address, the script will prompt you to enter one.
+
+### What the Script Does
+
+1.  **Syncs Files**: Uploads the project code to \`/var/www/resume\` on the remote server using \`rsync\`.
+2.  **Installs Dependencies**: Automatically installs **Node.js (v20)**, **npm**, and **PM2** on the server if missing.
+3.  **Builds the App**: Runs \`npm install\` and \`npm run build\` on the server.
+4.  **Starts the Service**: Uses **PM2** to start the application on **port 80** and configures it to restart on boot.
 
 ## 👤 Author
 
