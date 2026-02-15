@@ -1,8 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yi Zheng - Portfolio Website
 
-## Getting Started
+This is the personal portfolio website for **Yi Zheng**, a Senior Android Engineer at ByteDance. It acts as a digital resume, showcasing professional experience, technical skills, and featured projects. The site is built with modern web technologies, ensuring a high-performance and responsive user experience.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Linting:** ESLint
+
+## 📂 Project Structure
+
+```
+resume/
+├── public/          # Static assets (images, etc.)
+├── src/
+│   ├── app/         # Next.js App Router pages and layouts
+│   ├── assets/      # Project-specific assets (logos, etc.)
+│   ├── components/  # Reusable UI components
+│   └── lib/         # Data definitions (resume data)
+├── .gitignore
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+```
+
+## 🛠️ Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- Package manager (npm, yarn, or pnpm)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Ran-Mori/resume.git
+   cd resume
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+### Running Locally
+
+Start the development server to view the website:
 
 ```bash
 npm run dev
@@ -10,27 +64,25 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev`: Starts the development server with hot-reloading.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts the production server (requires a build first).
+- `npm run lint`: Runs ESLint to check for code quality issues.
 
-## Learn More
+## 👤 Author
 
-To learn more about Next.js, take a look at the following resources:
+**Yi Zheng**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Role:** Senior Android Engineer
+- **Company:** ByteDance (Doubao, Douyin)
+- **GitHub:** [Ran-Mori](https://github.com/Ran-Mori)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+&copy; 2026 Yi Zheng. All rights reserved.
