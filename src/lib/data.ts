@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Douyin",
-    description: "Douyin is a popular short - video - sharing platform. It allows users to create and share fun, engaging videos with a global audience.",
+    description: "Douyin is a popular short video sharing platform. It allows users to create and share fun, engaging videos with a global audience.",
     image: douyinLogo,
     link: "https://www.douyin.com/",
     skills: ["React Native", "TypeScript", "Node.js", "Socket.io"],
