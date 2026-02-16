@@ -123,3 +123,7 @@ This project includes a shell script for seamless deployment to a remote server 
 ## 📄 License
 
 &copy; 2026 Yi Zheng. All rights reserved.
+
+## Thanks
+
+[Brittany Chiang](https://brittanychiang.com/)
