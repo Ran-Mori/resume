@@ -81,15 +81,13 @@ ssh "$SERVER_USER@$SERVER_IP" << EOF
     # Start/Restart the application with PM2 on port 80
     echo "Configuring PM2..."
     
-    # Check if app is already running
-    if pm2 list | grep -q "resume-app"; then
-        echo "Restarting existing application..."
-        pm2 reload resume-app
-    else
-        echo "Starting new application instance..."
-        # Start the app on port 80
-        PORT=80 pm2 start npm --name "resume-app" -- start
-    fi
+    # Stop and delete existing application instance to ensure clean state
+    echo "Stopping existing application..."
+    pm2 delete resume-app || true
+
+    echo "Starting application instance..."
+    # Start the app on port 80
+    PORT=80 pm2 start npm --name "resume-app" -- start
 
     # Save PM2 process list so it restarts on reboot
     pm2 save
