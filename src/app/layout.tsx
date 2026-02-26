@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Spotlight from "@/components/Spotlight";
 import ScrollManager from "@/components/ScrollManager";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -16,7 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans bg-navy text-slate antialiased selection:bg-green selection:text-navy`}>
         <ScrollManager />
-        <Spotlight />
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
           {children}
         </div>
