@@ -1,13 +1,8 @@
-"use client";
-import { motion } from "framer-motion";
 import { Job } from "@/lib/data";
 
 export default function ExperienceCard({ job }: { job: Job }) {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+    <div
       className="group relative grid pb-4 mb-12 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
     >
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/25 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
@@ -52,6 +47,6 @@ export default function ExperienceCard({ job }: { job: Job }) {
           ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 }
